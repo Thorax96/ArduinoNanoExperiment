@@ -27,9 +27,9 @@ void LEDS::turnOff(const int port){
 
 void LEDS::blink(const int lightingTimeMS){
     const int* ports = getPortIds();
-    Tools::forEach(ports, [this](const int port) { turnOn(port); }); // Using lambda function
+    Tools::forEach(ports, [this](const int port) { turnOn(port); });
     delay(lightingTimeMS);
-    Tools::forEach(ports, [this](const int port) { turnOff(port); }); // Using lambda function
+    Tools::forEach(ports, [this](const int port) { turnOff(port); });
 }
 
 void LEDS::blink(const int port, const int lightingTimeMS) {
